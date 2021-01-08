@@ -1,0 +1,75 @@
+{
+  "projectName": "Imappi",
+  "version": "0.0.1",
+  "dev": {
+    "database": {
+      "database": "imappi",
+      "dialect": "mysql",
+      "username": "imappi",
+      "password": "!Q@W#E$R5t",
+      "host": "127.0.0.1",
+      "forceSync": false
+    },
+    "server": {
+      "port": 3000,
+      "jwtSecret": "!Q@W#E",
+      "jwtExpiration": "1h",
+      "host": "0.0.0.0",
+      "routePrefix": "/api",
+      "plugins": [
+        "swagger"
+      ],
+      "hostSwagger": "127.0.0.1:3000",
+      "scheme": "http"
+    }
+  },
+  "prod": {
+    "database": {
+      "database": "imappi",
+      "dialect": "mysql",
+      "username": "imappi",
+      "password": "!Q@W#E$R5t",
+      "host": "127.0.0.1",
+      "forceSync": false
+    },
+    "server": {
+      "port": 3000,
+      "jwtSecret": "random-secret-password",
+      "jwtExpiration": "1h",
+      "host": "0.0.0.0",
+      "routePrefix": "/api",
+      "plugins": [
+        "jwt-auth",
+        "logger",
+        "swagger"
+      ],
+      "hostSwagger": "api.funber.com.br",
+      "scheme": "https"
+    }
+  },
+  "test": {
+    "database": {
+      "database": "imappi",
+      "dialect": "mysql",
+      "username": "imappi",
+      "password": "!Q@W#E$R5t",
+      "host": "127.0.0.1",
+      "forceSync": false
+    },
+    "server": {
+      "port": 5000,
+      "jwtSecret": "random-secret-password",
+      "jwtExpiration": "1h",
+      "host": "0.0.0.0",
+      "routePrefix": "/api",
+      "plugins": [
+        "jwt-auth",
+        "logger",
+        "swagger"
+      ],
+      "hostSwagger": "localhost:3000",
+      "scheme": "http"
+    }
+  }
+
+}
